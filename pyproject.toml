@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpsdash"
+dynamic = ["version"]
+description = "Realtime GNSS dashboard for the Sierra EM7455 (Panasonic CF-20): NMEA, sky plot, XTRA injection"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []          # stdlib only; XTRA injection uses system PyGObject + libqmi (gir1.2-qmi-1.0)
+
+[project.scripts]
+gpsdash = "gpsdash.app:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "gpsdash.app.__version__" }
