@@ -12,7 +12,7 @@ pipx install --system-site-packages --force ~/src/gpsdash   # after changes
 ```
 
 `--system-site-packages` is needed only for XTRA injection (PyGObject + `gir1.2-qmi-1.0`
-come from Debian). XTRA helpers re-run `python -m gpsdash` under `sudo -n`.
+come from Debian). XTRA helpers re-run `python -P -m gpsdash` under `sudo -n`.
 
 ## Use
 

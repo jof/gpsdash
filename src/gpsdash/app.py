@@ -44,7 +44,7 @@ __version__ = "1.0.0"
 
 # How to re-run ourselves (as root, via sudo) for the QMI/AT helper modes: as a module, so it
 # works the same from a pipx venv, a checkout (python -m gpsdash) or an installed wheel.
-SELF = [sys.executable, "-m", "gpsdash"]
+SELF = [sys.executable, "-P", "-m", "gpsdash"]  # -P: never pick up a stray ./gpsdash.py
 
 DEFAULT_DEV = "/dev/ttyUSB2"
 DEFAULT_AT = "/dev/ttyUSB3"
